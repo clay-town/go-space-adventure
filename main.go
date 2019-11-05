@@ -34,7 +34,7 @@ func travel() {
 	}
 }
 
-func responseToPrompt(prompt) string {
+func responseToPrompt(prompt string) string {
 	var name string
 	fmt.Println(prompt)
 	fmt.Scan(&name)
