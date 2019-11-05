@@ -41,20 +41,6 @@ func responseToPrompt(prompt) string {
 	return name
 }
 
-func responseToPrompt(prompt) string{
-	var name string
-	fmt.Println(prompt)
-    fmt.Scan(&name)
-    return name
-}
-
-func responseToPrompt(prompt) string {
-	var name string
-	fmt.Println(prompt)
-	fmt.Scan(&name)
-	return name
-}
-
 func travelToRandomPlanet() {
 	fmt.Println("Traveling to Jupiter...")
 	fmt.Println("Arrived at Jupiter. The large red spot appears ominous.")
