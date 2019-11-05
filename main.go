@@ -34,21 +34,21 @@ func travel() {
 	}
 }
 
-func getName(prompt) string {
-	var choice string
+func responseToPrompt(prompt) string {
+	var name string
 	fmt.Println(prompt)
 	fmt.Scan(&name)
 	return name
 }
 
-func getName(prompt) string{
+func responseToPrompt(prompt) string{
 	var name string
 	fmt.Println(prompt)
     fmt.Scan(&name)
     return name
 }
 
-func getName(prompt) string {
+func responseToPrompt(prompt) string {
 	var name string
 	fmt.Println(prompt)
 	fmt.Scan(&name)
