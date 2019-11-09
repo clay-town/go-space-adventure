@@ -1,6 +1,7 @@
+package spaceadventure
 import "fmt"
 
-func start(){
+func Start(){
 
 }
 
