@@ -1,6 +1,8 @@
-package main
-
 import "fmt"
+
+func start(){
+
+}
 
 func main() {
 	printWelcome()
@@ -43,7 +45,6 @@ func travelToRandomPlanet() {
 	fmt.Println("Traveling to Jupiter...")
 	fmt.Println("Arrived at Jupiter. The large red spot appears ominous.")
 }
-
 
 func travelToPlanet(planetName string) {
 	fmt.Printf("Traveling to %s...\n", planetName)
