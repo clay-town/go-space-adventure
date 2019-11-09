@@ -1,3 +1,3 @@
 package main
 
-import "github.com/clay-town/got-space-adventure/internal/spaceadventure"
+import "github.com/clay-town/go-spaceadventure-walkthrough/internal/spaceadventure"
