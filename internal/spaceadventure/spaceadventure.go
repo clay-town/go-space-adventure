@@ -17,17 +17,25 @@ func printGreeting(name string) {
 	fmt.Printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Siri.\n", name)
 }
 
+func promptForRandomOrSpecificDestination() bool{
+	switch choice := responseToPrompt("Shall I randomly choose a planet for you to visit? (Y or N)"); choice {
+	case "Y", "y":
+		return true
+	case "N", "n":
+		return false
+	default:
+		fmt.Println("Sorry, I didn't get that.")
+		promptForRandomOrSpecificDestination()
+	}
+	return false
+}
+
 func travel() {
-	var choice string
-	for choice != "Y" && choice != "N" {
-		choice = responseToPrompt("Shall I randomly choose a planet for you to visit? (Y or N)")
-		if choice == "Y" {
-			travelToRandomPlanet()
-		} else if choice == "N" {
-			travelToPlanet(responseToPrompt("Name the planet you would like to visit."))
-		} else {
-			fmt.Println("Sorry, I didn't get that.")
-		}
+	switch tf := promptForRandomOrSpecificDestination(); tf{
+	case true:
+		travelToRandomPlanet()
+	case false:
+		travelToPlanet(responseToPrompt("Name the planet you would like to visit"))
 	}
 }
 
