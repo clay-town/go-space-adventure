@@ -2,6 +2,7 @@ package spaceadventure
 
 import "fmt"
 
+//Start is available to the outside world
 func Start(planetarySystem PlanetarySystem) {
 	printWelcome(planetarySystem)
 	printGreeting(responseToPrompt("What is your name?"))
