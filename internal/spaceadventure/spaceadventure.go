@@ -1,4 +1,5 @@
 package spaceadventure
+
 import "fmt"
 
 func Start(planetarySystem PlanetarySystem) {
@@ -8,7 +9,7 @@ func Start(planetarySystem PlanetarySystem) {
 	travel()
 }
 
-func printWelcome( planetarySystem PlanetarySystem) {
+func printWelcome(planetarySystem PlanetarySystem) {
 	fmt.Println("Welcome to the", planetarySystem.Name)
 	fmt.Println("There are 8 planets to explore.")
 }
@@ -17,7 +18,7 @@ func printGreeting(name string) {
 	fmt.Printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Siri.\n", name)
 }
 
-func promptForRandomOrSpecificDestination() bool{
+func promptForRandomOrSpecificDestination() bool {
 	switch choice := responseToPrompt("Shall I randomly choose a planet for you to visit? (Y or N)"); choice {
 	case "Y", "y":
 		return true
@@ -31,7 +32,7 @@ func promptForRandomOrSpecificDestination() bool{
 }
 
 func travel() {
-	switch tf := promptForRandomOrSpecificDestination(); tf{
+	switch tf := promptForRandomOrSpecificDestination(); tf {
 	case true:
 		travelToRandomPlanet()
 	case false:
